@@ -1,5 +1,8 @@
 require '../src/lexical_analyzer'
 class Parser
+
+  attr_accessor :lex
+
   def initialize(file_name)
     if file_name.nil?
       raise TypeError, 'invalid file name argument'
@@ -7,7 +10,7 @@ class Parser
     LexicalAnalyzer.new(file_name)
   end
 
-  def parse
+  def feature
 
   end
 
