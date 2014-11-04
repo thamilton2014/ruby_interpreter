@@ -2,13 +2,20 @@ require '../src/parser'
 class Interpreter
 
   def initialize
-    puts "Please select action: \n1.] Create script \n2.] Execute script"
+    puts 'Executing Interpreter...'
   end
+
+  def execute
+    p = Parser.new('/Users/thamilton/RubymineProjects/Project_2/test_data/test1.e')
+    p.feature.execute
+  end
+
 end
 
 @object = Interpreter.new
+@object.execute
 
+@memory = Memory.new
+@memory.display_memory
 
-# @object = Parser. new('/Users/thamilton/RubymineProjects/Project_2/test_data/test1.e')
-# @object.feature
 

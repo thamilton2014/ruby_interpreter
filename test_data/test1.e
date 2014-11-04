@@ -1,4 +1,4 @@
-feature A is
+feature a is
 do
     x := 2
     print ( x )

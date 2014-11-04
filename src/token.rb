@@ -1,17 +1,17 @@
 class Token
-  def initialize(line_num, column_num, line, token_type)
-    if line_num.nil? || column_num.nil?
+
+  def initialize(line_num, token_type, word)
+    if line_num.nil?
       raise TypeError, '[Token] invalid column/row number argument'
     end
-    if line.nil?
+    if word.nil?
       raise TypeError, '[Token] invalid line argument'
     end
     if token_type.nil?
       raise TypeError, '[Token] invalid TokenType argument'
     end
     @line_num = line_num
-    @column_num = column_num
-    @line = line
+    @word = word
     @token_type = token_type
   end
 
@@ -19,12 +19,8 @@ class Token
     @line_num
   end
 
-  def get_column_number
-    @column_num
-  end
-
   def get_lexeme
-    @line
+    @word
   end
 
   def get_token_type

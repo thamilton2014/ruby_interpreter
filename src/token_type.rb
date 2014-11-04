@@ -10,4 +10,6 @@ class TokenType
   LPARAN_TOK = 'LPARAN_TOK'
   RPARAN_TOK = 'RPARAN_TOK'
   END_TOK = 'END_TOK'
+  IF_TOK = 'IF_TOK'
+  FROM_TOK = 'FROM_TOK'
 end
