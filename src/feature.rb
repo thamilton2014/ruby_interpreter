@@ -10,7 +10,7 @@ class Feature
   end
 
   def execute
-    # @compound.execute
+    @compound.execute
   end
 
 end

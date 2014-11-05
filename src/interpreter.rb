@@ -6,8 +6,8 @@ class Interpreter
   end
 
   def execute
-    p = Parser.new('/Users/thamilton/RubymineProjects/Project_2/test_data/test1.e')
-    p.feature.execute
+    p = Parser.new('/Users/thamilton/RubymineProjects/Project_2/test_data/test4.e')
+    p.parse.execute
   end
 
 end

@@ -43,6 +43,38 @@ class LexicalAnalyzer
       token_type = TokenType::RPARAN_TOK
     elsif line.eql? 'end'
       token_type = TokenType::END_TOK
+    elsif line.eql? 'if'
+      token_type = TokenType::IF_TOK
+    elsif line.eql? 'then'
+      token_type = TokenType::THEN_TOK
+    elsif line.eql? 'else'
+      token_type = TokenType::ELSE_TOK
+    elsif line.eql? '>'
+      token_type = TokenType::GT_TOK
+    elsif line.eql? '>='
+      token_type = TokenType::GE_TOK
+    elsif line.eql? '<'
+      token_type = TokenType::LT_TOK
+    elsif line.eql? '<='
+      token_type = TokenType::LE_TOK
+    elsif line.eql? '/='
+      token_type = TokenType::NE_TOK
+    elsif line.eql? '=='
+      token_type = TokenType::EQ_TOK
+    elsif line.eql? 'from'
+      token_type = TokenType::FROM_TOK
+    elsif line.eql? 'until'
+      token_type = TokenType::UNTIL_TOK
+    elsif line.eql? 'loop'
+      token_type = TokenType::LOOP_TOK
+    elsif line.eql? '+'
+      token_type = TokenType::ADD_TOK
+    elsif line.eql? '-'
+      token_type = TokenType::SUB_TOK
+    elsif line.eql? '*'
+      token_type = TokenType::MUL_TOK
+    elsif line.eql? '/'
+      token_type = TokenType::DIV_TOK
     else
       raise TypeError, 'invalid lexeme at row ' + line_num.to_s + ' : ' + line
     end
