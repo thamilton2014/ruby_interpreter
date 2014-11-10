@@ -33,7 +33,7 @@ class LexicalAnalyzer
       token_type = TokenType::DO_TOK
     elsif line.eql? ':='
       token_type = TokenType::ASSIGN_TOK
-    elsif line =~ /[0-9]/
+    elsif line =~ /[0-9]+/
       token_type = TokenType::CONST_TOK
     elsif line.eql? 'print'
       token_type = TokenType::PRINT_TOK
@@ -87,7 +87,6 @@ class LexicalAnalyzer
     end
     TOKEN.fetch(0)
     TOKEN.shift
-    # TOKEN.pop(0)
   end
 
   def get_look_ahead_token
